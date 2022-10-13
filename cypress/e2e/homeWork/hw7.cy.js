@@ -57,20 +57,5 @@ params.forEach(({value, expected}) => {
             cy.get(`[style="${expected[0]}"] nb-toast`)
             .should('have.css', 'background').and('contain', expected[4]);
         });
-
-        /*//позиція
-        cy.get('.cdk-overlay-container>div').eq(value[4])
-        .should('have.attr', 'style').and('eq', expected[0]);
-        //тайтл і контент
-        cy.get(`.cdk-overlay-container>div[style="${expected[0]}"] span.title.subtitle`)
-        .should('contain', expected[1]);
-        cy.get(`.cdk-overlay-container>div[style="${expected[0]}"] div.message`)
-        .should('contain', expected[2]);
-        //іконка
-        cy.get(`.cdk-overlay-container>div[style="${expected[0]}"] g[data-name="${expected[3]}"]`)
-        .should('have.attr', 'data-name').and('eq', expected[3]);
-        //колір
-        cy.get(`.cdk-overlay-container>div[style="${expected[0]}"] nb-toast`)
-        .should('have.css', 'background').and('contain', expected[4]);*/
     })
 })
